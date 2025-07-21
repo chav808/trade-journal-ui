@@ -42,15 +42,19 @@ export default function CalendarGrid({ onDayClick }) {
   return (
     <div className="bg-white p-4 rounded shadow text-black">
       <div className="flex justify-between items-center mb-4">
-        <button onClick={prevMonth} className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">&lt;</button>
+        <button type="button"
+  onClick={prevMonth}
+  className="!bg-white !text-black px-2 py-1 rounded hover:!bg-gray-200">&lt;</button>
         <h2 className="text-xl font-semibold">{monthNames[month]} {year}</h2>
-        <button onClick={nextMonth} className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">&gt;</button>
+        <button type="button"
+  onClick={prevMonth}
+  className="!bg-white !text-black px-2 py-1 rounded hover:!bg-gray-200">&gt;</button>
       </div>
 
       <div className="grid grid-cols-7 text-center font-bold mb-2">
         {weekDays.map((day) => (
           <div key={day} className="text-gray-700">{day}</div>
-        ))}
+        ))}you
       </div>
 
       <div className="grid grid-cols-7 gap-2">
